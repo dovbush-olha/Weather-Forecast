@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="search">
+          <form class="form" action="#" novalidate>
+            <input
+              class="form__input"
+              type="text"
+              name="city"
+              placeholder="Search a new city..."
+              value=""
+            />
+            <button class="form__button" type="submit">
+              <img src="images/search-icon.svg" alt="search icon" />
+            </button>
+          </form>
+          <div class="search__date"></div>
+        </div>
+        <div class="inner">
+          <div class="columns__item">
+            <div class="tabs">
+              <div class="tabs__content">
+                <div class="tab is-active tab-1">
+                  <div class="item__column">
+                    <div class="item__degrees">
+                      <h2 class="degrees">14°</h2>
+                    </div>
+                    <div class="item__weather">
+                      <img
+                        class="cloud"
+                        src="images/cloud-forecast.svg"
+                        alt="icon-cloud"
+                      />
+                    </div>
+                    <div class="item-row">
+                      <p class="item-row__text"></p>
+                      <button class="liked-button">
+                        <img
+                          class="item-row__img"
+                          src="images/heart-icon.svg"
+                          alt="heart icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab tab-2">
+                  <h3 id="details-city" class="tab__city"></h3>
+                  <ul class="tab__city-list">
+                    <li class="tab__city-item temp">
+                      <span>Temperature:</span>
+                    </li>
+                    <li class="tab__city-item feel">
+                      <span>Feels like:</span>
+                    </li>
+                    <li class="tab__city-item weather">
+                      <span>Weather:</span>
+                    </li>
+                    <li class="tab__city-item sunrise">
+                      <span>Sunrise:</span>
+                    </li>
+                    <li class="tab__city-item sunset"><span>Sunset:</span></li>
+                  </ul>
+                </div>
+                <div class="tab tab-3">
+                  <h3 class="tab__city city city-forecast">Aktobe</h3>
+                  <div id="tables"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__nav tabs-nav">
+              <div class="tabs-nav__item is-active" data-tab-name="tab-1">
+                Nows
+              </div>
+              <div class="tabs-nav__item" data-tab-name="tab-2">Details</div>
+              <div id="forecast" class="tabs-nav__item" data-tab-name="tab-3">
+                Forecast
+              </div>
+            </div>
+          </div>
+          <div class="location item-rightside">
+            <div class="item-rightside__top">
+              <h4 class="item-rightside__title">Added Locations:</h4>
+            </div>
+            <div class="item-rightside__bottom item-location">
+              <ul class="item-location__list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
