@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120px" height="120px" viewBox="0 0 120 120" version="1.1">
+<g id="surface1">
+<path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(72.54902%,75.686275%,77.647059%);stroke-opacity:1;stroke-miterlimit:10;" d="M 16.5 17.5 L 29.5 17.5 M 9.5 22.5 L 22.5 22.5 M 6.5 27.5 L 55.5 27.5 " transform="matrix(1.875,0,0,1.875,0,0)"/>
+<path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M 39.5 32.5 L 57.5 32.5 " transform="matrix(1.875,0,0,1.875,0,0)"/>
+<path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(72.54902%,75.686275%,77.647059%);stroke-opacity:1;stroke-miterlimit:10;" d="M 6.5 32.5 L 31.5 32.5 " transform="matrix(1.875,0,0,1.875,0,0)"/>
+<path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M 30.5 37.5 L 56.5 37.5 M 15.5 42.5 L 52.5 42.5 M 25.5 47.5 L 42.5 47.5 M 8.5 37.5 L 23.5 37.5 " transform="matrix(1.875,0,0,1.875,0,0)"/>
+<path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(72.54902%,75.686275%,77.647059%);stroke-opacity:1;stroke-miterlimit:10;" d="M 28.5 22.5 L 35.5 22.5 " transform="matrix(1.875,0,0,1.875,0,0)"/>
+<path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:10;" d="M 45.5 22.5 L 52.5 22.5 " transform="matrix(1.875,0,0,1.875,0,0)"/>
+</g>
+</svg>
