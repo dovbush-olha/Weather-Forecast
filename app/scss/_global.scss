@@ -4,10 +4,9 @@ body {
 }
 
 body {
-  @extend %aileron-400;
   font-size: 18px;
   line-height: 26px;
-  color: $default;
+  color: #6f4849;
   display: flex;
   flex-direction: column;
   background-image: url("../images/bg.jpg");
