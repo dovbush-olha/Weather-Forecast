@@ -20,5 +20,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.54.9"
+  },
+  "devDependencies": {
+    "gulp-gh-pages": "^0.5.4"
   }
 }

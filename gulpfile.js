@@ -8,6 +8,8 @@ import del from "del";
 import autoprefixer from "gulp-autoprefixer";
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
+import ghPages from "gulp-gh-pages";
+
 const scss = gulpSass(dartSass);
 
 function browsersync() {
@@ -62,6 +64,10 @@ function watching() {
   gulp.watch(["app/js/**/*.js", "!app/js/main.js"], scripts);
   gulp.watch(["app/**/*.html"]).on("change", browserSync.reload);
 }
+
+gulp.task("deploy", function () {
+  return gulp.src("./dist/**/*").pipe(ghPages());
+});
 
 export const stylesRun = styles;
 export const scriptsRun = scripts;
