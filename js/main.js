@@ -51,7 +51,7 @@ function changeDetailsDateFormat(time) {
 function setWeatherData() {
   UI_ELEM.NOWS_CITY.textContent = weatherData.cityName;
   UI_ELEM.NOWS_DEGREES.textContent = `${weatherData.cityTemperature}°`;
-  UI_ELEM.NOWS_ICON.src = `../images/nows/${weatherData.icon}.svg`;
+  UI_ELEM.NOWS_ICON.src = `../docs/assets/images/nows/${weatherData.icon}.svg`;
   UI_ELEM.DETAILS_CITY.textContent = weatherData.cityName;
   UI_ELEM.DETAILS_TEMP.innerHTML = `<span>Temperature:</span> ${weatherData.cityTemperature}°`;
   UI_ELEM.DETAILS_FEEL.innerHTML = `<span>Feels like:</span> ${weatherData.feelsLike}°`;
@@ -83,7 +83,10 @@ function reset() {
 
 UI_ELEM.FORM.addEventListener("submit", (event) => {
   event.preventDefault();
-  UI_ELEM.NOWS__LIKE.setAttribute("src", "../images/heart-icon.svg");
+  UI_ELEM.NOWS__LIKE.setAttribute(
+    "src",
+    "../docs/assets/images/heart-icon.svg"
+  );
   UI_ELEM.INPUT_NAME.classList.remove("error");
   fetchCityWeather(UI_ELEM.INPUT_NAME.value);
 
@@ -184,7 +187,7 @@ function createTables(forecastList) {
     const td6 = document.createElement("td");
     const img = document.createElement("img");
     img.classList.add("table-img");
-    img.src = `../images/animated/${element.weather[0].icon}.svg`;
+    img.src = `../docs/assets/images/animated/${element.weather[0].icon}.svg`;
     td6.append(img);
     tr3.append(td5, td6);
 
@@ -213,7 +216,10 @@ function createNewElement(city) {
   cityElement.textContent = city;
 
   cityElement.addEventListener("click", () => {
-    UI_ELEM.NOWS__LIKE.setAttribute("src", "../images/heart-icon.svg");
+    UI_ELEM.NOWS__LIKE.setAttribute(
+      "src",
+      "../docs/assets/images/heart-icon.svg"
+    );
     UI_ELEM.INPUT_NAME.classList.remove("error");
     UI_ELEM.FORECAST_CITY.textContent = cityElement.textContent;
 
@@ -264,7 +270,10 @@ loadStorage();
 
 function createLikedList() {
   UI_ELEM.NOWS__LIKE.addEventListener("click", () => {
-    UI_ELEM.NOWS__LIKE.setAttribute("src", "../images/heart-icon-liked.svg");
+    UI_ELEM.NOWS__LIKE.setAttribute(
+      "src",
+      "../docs/assets/images/heart-icon-liked.svg"
+    );
 
     const favoriteCities = storage.getFavoriteCities();
     if (!favoriteCities.has(weatherData.cityName)) {
