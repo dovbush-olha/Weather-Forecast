@@ -34,7 +34,7 @@ function jsonCity(data) {
   });
 }
 
-function addZerro(num) {
+function addZero(num) {
   if (num >= 0 && num <= 9) {
     return `0${num}`;
   }
@@ -43,15 +43,15 @@ function addZerro(num) {
 
 function changeDetailsDateFormat(time) {
   const date = new Date(time * 1000);
-  const hour = addZerro(date.getHours());
-  const min = addZerro(date.getMinutes());
+  const hour = addZero(date.getHours());
+  const min = addZero(date.getMinutes());
   return `${hour}:${min}`;
 }
 
 function setWeatherData() {
   UI_ELEM.NOWS_CITY.textContent = weatherData.cityName;
   UI_ELEM.NOWS_DEGREES.textContent = `${weatherData.cityTemperature}°`;
-  UI_ELEM.NOWS_ICON.src = `../docs/assets/images/nows/${weatherData.icon}.svg`;
+  UI_ELEM.NOWS_ICON.src = `docs/assets/images/nows/${weatherData.icon}.svg`;
   UI_ELEM.DETAILS_CITY.textContent = weatherData.cityName;
   UI_ELEM.DETAILS_TEMP.innerHTML = `<span>Temperature:</span> ${weatherData.cityTemperature}°`;
   UI_ELEM.DETAILS_FEEL.innerHTML = `<span>Feels like:</span> ${weatherData.feelsLike}°`;
@@ -83,10 +83,7 @@ function reset() {
 
 UI_ELEM.FORM.addEventListener("submit", (event) => {
   event.preventDefault();
-  UI_ELEM.NOWS__LIKE.setAttribute(
-    "src",
-    "../docs/assets/images/heart-icon.svg"
-  );
+  UI_ELEM.NOWS__LIKE.setAttribute("src", "docs/assets/images/heart-icon.svg");
   UI_ELEM.INPUT_NAME.classList.remove("error");
   fetchCityWeather(UI_ELEM.INPUT_NAME.value);
 
@@ -124,7 +121,7 @@ function filterCities(button) {
   return FILTERED_CITIES;
 }
 
-function deleteZerro(num) {
+function deleteZero(num) {
   if (num >= 0 && num <= 9) {
     return num.slice(1);
   }
@@ -149,7 +146,7 @@ function changeFormatForecastDate(date) {
   ];
   const fullDate = date.slice(0, 10);
   const arr = fullDate.split("-");
-  const month = deleteZerro(arr[1]);
+  const month = deleteZero(arr[1]);
   const newFormatDate = `${arr[2]} ${months[month]}`;
   return newFormatDate;
 }
@@ -187,7 +184,7 @@ function createTables(forecastList) {
     const td6 = document.createElement("td");
     const img = document.createElement("img");
     img.classList.add("table-img");
-    img.src = `../docs/assets/images/animated/${element.weather[0].icon}.svg`;
+    img.src = `docs/assets/images/animated/${element.weather[0].icon}.svg`;
     td6.append(img);
     tr3.append(td5, td6);
 
@@ -216,10 +213,7 @@ function createNewElement(city) {
   cityElement.textContent = city;
 
   cityElement.addEventListener("click", () => {
-    UI_ELEM.NOWS__LIKE.setAttribute(
-      "src",
-      "../docs/assets/images/heart-icon.svg"
-    );
+    UI_ELEM.NOWS__LIKE.setAttribute("src", "docs/assets/images/heart-icon.svg");
     UI_ELEM.INPUT_NAME.classList.remove("error");
     UI_ELEM.FORECAST_CITY.textContent = cityElement.textContent;
 
@@ -272,7 +266,7 @@ function createLikedList() {
   UI_ELEM.NOWS__LIKE.addEventListener("click", () => {
     UI_ELEM.NOWS__LIKE.setAttribute(
       "src",
-      "../docs/assets/images/heart-icon-liked.svg"
+      "docs/assets/images/heart-icon-liked.svg"
     );
 
     const favoriteCities = storage.getFavoriteCities();
