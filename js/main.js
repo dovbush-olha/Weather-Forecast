@@ -4,8 +4,8 @@ import { storage } from "./storage.js";
 
 tab();
 
-const SERVER_URL_WEATHER = "http://api.openweathermap.org/data/2.5/weather";
-const SERVER_URL_FORECAST = "http://api.openweathermap.org/data/2.5/forecast";
+const SERVER_URL_WEATHER = "https://api.openweathermap.org/data/2.5/weather";
+const SERVER_URL_FORECAST = "https://api.openweathermap.org/data/2.5/forecast";
 const API_KEY = "73b04f10a5d603d29c52ac0a00cc5625";
 const weatherData = {};
 
